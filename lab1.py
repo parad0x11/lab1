@@ -82,8 +82,13 @@ def get_linux_info() -> dict:       # сбор параметров для linux
 
 
 def get_windows_info() -> dict:
-    """Заглушка для Windows."""
-    return {}
+    return {
+        "windows_release":planform.release(),
+        "windows_version": planform.version(),
+        "processor": planform.processor(),
+        "working_folder": os.getcwd(),
+    }
+        
 
 
 def main():
