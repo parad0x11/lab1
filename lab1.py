@@ -83,9 +83,9 @@ def get_linux_info() -> dict:       # сбор параметров для linux
 
 def get_windows_info() -> dict:
     return {
-        "windows_release":planform.release(),
-        "windows_version": planform.version(),
-        "processor": planform.processor(),
+        "windows_release":platform.release(),
+        "windows_version": platform.version(),
+        "processor": platform.processor(),
         "working_folder": os.getcwd(),
     }
         
